@@ -265,5 +265,8 @@ settings = {
   };
   "fe-text" = { actlist_sort = "refnum"; };
   "fe-common/core" = { timestamps = "yes"; };
+  "perl/core/scripts" = {
+    irssinotifier_away_only = "yes";
+  };
 };
 logs = { };
