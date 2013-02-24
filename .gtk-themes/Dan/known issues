@@ -1,0 +1,33 @@
+*** lxpanel (Lubuntu or Madbox) gtk2 file : /gtk-2.0/apps/panel.rc
+The calendar show a white border impossible to colorize or hide ! Help me, please...
+
+*** Ubuntu ***
+The only way to change a theme in Ubuntu 12.04LTS is to install Ubuntu-tweak:
+  http://ubuntu-tweak.com/
+
+*** nautilus ***
+When you right clic on a folder or a file, then properties and permissions, the owner is not well displayed. If we fix it in line106 of the gtk-widgets.css file, we have issues elsewhere. So the solution must be in the /apps/nautilus.css file. But don't know how after a few hours of searching...
+
+*** Unity 2D ***
+Buttons in the global menu that appears too dark.. (must be a bug in Unity2D)
+
+*** Xubuntu and Compiz ***
+If you use compiz, you have to install gconf-editor and launch it:
+  sudo apt-get install gconf-editor
+  gconf-editor
+
+In "apps/metacity/general", modify the value of "theme" to "03-Crunchy-blue", "04-Crunchy-grey" or "05-Crunchy-green"
+  compiz --replace
+
+and now you'll have the right window decorator.
+
+*** Gnome-Shell ***
+You'll have to install the gconf-editor as described for Xubuntu to install the theme.
+As said before, you'll have to identify the theme for metacity.
+Perhaps you'll have to do it for "desktop/gnome/interface" too (gtk_theme).
+The specific theme for gnome-shell is only in blue (from Ambiance-blue)
+
+*** Madbox ***
+It's an Openbox theme but to have the gnome-mplayer with the right theme:
+  * Open the file: /home/<login-name>/.config/gtk-3.0/settings.ini and change the name of the theme
+

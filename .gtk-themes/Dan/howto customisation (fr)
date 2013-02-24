@@ -1,0 +1,67 @@
+Si vous souhaitez créer une version personnalisée de ce thème en changeant la couleur de sélection et des boutons des fenêtres, voici la méthode :
+
+**** GTK+ ****
+Couleurs des sélections pour "gtk-2.0" et "gtk-3.0" :
+orange:#f07746
+bleu: #4a90d9
+gris: #9E9EB3
+vert: #70AE6C
+
+Dans le dossier "gtk-2.0", le fichier "gtkrc" :
+ligne 7: changer les couleurs de "selected_bg_color:" et "link_color:"
+
+Dans le dossier "gtk-3.0", le fichier "settings.ini" :
+ligne 2: changer les couleurs de "selected_bg_color:" et "link_color:"
+
+Même dossier, le fichier "gtk.css" :
+ligne 6: changer la couleur de "selected_bg_color"
+ligne 30: changer la couleur de "link_color"
+
+**** OPENBOX ****
+Dans le dossier "Openbox-3", le fichier "themerc" :
+Couleur claire:	orange:#f07746	bleu: #4a90d9 	gris: #9E9EB3	vert: #70AE6C
+Couleur foncée:	orange:#B35934	bleu: #336499	gris: #707080	vert: #568553
+
+ligne 81: menu.items.active.bg.color: <couleur claire>
+ligne 82: menu.items.active.bg.colorTo: <couleur foncée>
+ligne 108: window.active.button.*.bg.color: <couleur claire>
+ligne 109: window.active.button.*.bg.colorTo: <couleur foncée>
+ligne 117: window.active.button.*.hover.bg.color: <couleur foncée>
+
+**** GNOME-SHELL & Cinnamon (Linux Mint gtk-3) ****
+Couleurs de sélection:
+02-Crunchy-orange:	#f07746, 20%:rgba(240,119,70,0.2)	darker-orange:	#B35934, 40%:rgba(179,89,52,0.4)
+03-Crunchy-blue:	#4a90d9, 20%:rgba(74,144,217,0.2)	darker-blue:	#2A5380, 40%:rgba(42,83,128,0.4)
+04-Crunchy-grey:	#9E9EB3, 20%:rgba(158,158,179,0.2)	darker-grey:	#5A5A66, 40%:rgba(90,90,102,0.4)
+05-Crunchy-green:	#70AE6C, 20%:rgba(111,174,108,0.2)	darker-green:	#3E613C, 40%:rgba(62,97,60,0.4)
+
+Autres couleurs:
+panel:	#66655F		darker:#262523
+darkbackground:#504e46	darker-bg:#3c3b37
+greys:	7%:#eee		13%:#ddd	30%:#B3B3B3		40%:#999
+
+named colors:white,grey,black,red,green,blue,transparent
+
+Couleurs avec transparence:
+white: 70%_opacité:rgba(255,255,255,0.7)
+greys:	5%+80%:rgba(242,242,242,0.8), 40%+40%:rgba(153,153,153,0.4), 40%+80%:rgba(153,153,153,0.8), 50%+45%:rgba(128,128,128,0.45)
+
+darkbackground:	20%:rgba(80,78,70,0.2), 70%:rgba(80,78,70,0.7), 80%:rgba(80,78,70,0.8), 90%:rgba(80,78,70,0.9)
+
+**** Buttons ****
+Les fichiers sont repris du thème de Ravefinity : http://ubuntu-art.org/content/show.php?action=content&content=147891
+
+orange:	Classic-Ambiance-Orange-XfceLXDE
+bleu: 	Classic-Ambiance-Blue-XfceLXDE
+vert: 	Classic-Ambiance-Green-XfceLXDE
+gris: 	Classic-Ambiance-Ice-XfceLXDE
+
+Fichiers à copier vers votre thème personnalisé :
+Dossier "metacity-1" (uniquement ces 4 fichiers) :
+close.png, close_focused_normal.png, close_focused_prelight.png et close_focused_pressed.png
+
+Dossier "unity" (uniquement ces 4 fichiers) :
+close.png, close_focused_normal.png, close_focused_prelight.png et close_focused_pressed.png
+
+Dossier "xfwm4" (uniquement ces 4 fichiers) :
+close-active.png, close-inactive.png, close-prelight.png, close-pressed.png
