@@ -1,0 +1,23 @@
+[roxterm profile]
+font=Terminus 8
+always_show_tabs=0
+hide_menubar=1
+show_resize_grip=0
+audible_bell=0
+use_custom_command=0
+command=tmux
+scrollbar_pos=0
+scroll_on_output=1
+scroll_on_keystroke=1
+disable_menu_access=1
+disable_menu_shortcuts=1
+disable_tab_menu_shortcuts=1
+tab_pos=4
+bell_highlights_tab=0
+browser=firefox
+mailer=thunderbird
+dir_filer=firefox
+cursor_shape=0
+background_type=2
+saturation=0.203655
+win_title=Terminal
