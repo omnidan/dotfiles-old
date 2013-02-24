@@ -1,3 +1,5 @@
+# This is my irssi theme based off fear2.theme
+
 # When testing changes, the easiest way to reload the theme is with /RELOAD.
 # This reloads the configuration file too, so if you did any changes remember
 # to /SAVE it first. Remember also that /SAVE overwrites the theme file with
