@@ -1,5 +1,3 @@
-# My theme based off fear2.theme
-
 # When testing changes, the easiest way to reload the theme is with /RELOAD.
 # This reloads the configuration file too, so if you did any changes remember
 # to /SAVE it first. Remember also that /SAVE overwrites the theme file with
@@ -25,9 +23,9 @@
 # can have more parameters of course). Templates can have subtemplates.
 # Here's a small example:
 #   /FORMAT format hello {colorify {underline world}}
-#   abstracts = { colorify = "%c$0-%n"; underline = "%U$0-%U"; }
+#   abstracts = { colorify = "%C$0-%n"; underline = "%U$0-%U"; }
 # When irssi expands the templates in "format", the final string would be:
-#   hello %c%Uworld%U%n
+#   hello %C%Uworld%U%n
 # ie. underlined bright green "world" text.
 # and why "$0-", why not "$0"? $0 would only mean the first parameter,
 # $0- means all the parameters. With {underline hello world} you'd really
@@ -102,7 +100,7 @@ abstracts = {
   ##
 
   # highlighted nick/host is printed (joins)
-  channick_hilight = "%c$*%n";
+  channick_hilight = "%C$*%n";
   chanhost_hilight = "{nickhost %c$*%n}";
 
   # nick/host is printed (parts, quits, etc.)
@@ -148,7 +146,7 @@ abstracts = {
 
   # public message in channel meant for me, $0 = nick mode, $1 = nick
   pubmsgmenick = "{msgnick $0 $1-}";
-  menick = "%c$*%n";
+  menick = "%C$*%n";
 
   # public highlighted message in channel
   # $0 = highlight color, $1 = nick mode, $2 = nick
@@ -219,7 +217,7 @@ abstracts = {
 
   # netsplits
   netsplit = "%R$*%n";
-  netjoin = "%c$*%n";
+  netjoin = "%C$*%n";
 
   # /names list
   names_prefix = "";
@@ -228,7 +226,7 @@ abstracts = {
   names_nick_halfop = "{names_nick $*}";
   names_nick_voice = "{names_nick $*}";
   names_users = "[%c$*%n]";
-  names_channel = "%c$*%n";
+  names_channel = "%C$*%n";
 
   # DCC
   dcc = "%c$*%n";
@@ -242,8 +240,8 @@ abstracts = {
   dccownaction_target = "{action_core $0}%K:%c$1%n ";
 
   # DCC chat, others
-  dccmsg = "[%c$1-%K(%c$0%K)%n] ";
-  dccquerynick = "%c$*%n";
+  dccmsg = "[%C$1-%K(%c$0%K)%n] ";
+  dccquerynick = "%C$*%n";
   dccaction = "%W (*dcc*) $*%n %|";
 
   ##
