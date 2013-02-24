@@ -1,0 +1,10 @@
+out_to_console yes
+out_to_x no
+background no
+update_interval 1
+total_run_times 0
+use_spacer none
+
+TEXT
+# NP: $mpd_smart ::
+DOWN: ${downspeed wlan0} :: UP: ${upspeed wlan0} :: BAT: [${battery_bar BAT0}] ${battery_time BAT0} :: CPU: ${cpu cpu}% :: TEMP: ${acpitemp}°C :: MEM: $memperc% ($mem) :: ${time %a %b %d %I:%M:%S%P} ::
