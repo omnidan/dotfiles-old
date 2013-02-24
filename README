@@ -1,0 +1,11 @@
+Those are my dotfiles, mostly used by me to sync my configuration on all my machines.
+
+In order to make proper use of the .conkyrc you need to run dwm-dan.
+
+For the gtk theme you will need the gtk-murrine engine.
+
+You also need to install the following packages/programs to use all the dotfiles:
+ * Base system (CLI): zsh tmux vim curl
+ * Base system - Addition: Additionally, you will need http://ctags.sf.net to run vim properly
+ * Graphical system (GUI): dwm roxterm gtk2-engines-murrine conky-cli
+ * Graphical system - Addition: Additionally, you will need https://github.com/omnidan/dwm-dan
