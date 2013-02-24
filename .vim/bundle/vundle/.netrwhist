@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/home/dan/programming/active/httpreq/.git'
+let g:netrw_dirhist_2='/home/dan/programming/active/ArduinoPure/.git'
+let g:netrw_dirhist_3='/home/dan/programming/active/tnreq'
+let g:netrw_dirhist_4='/home/dan/programming/active/touchlay/tn2_core/.git'
+let g:netrw_dirhist_5='/home/dan/programming/active/touchlay/tn2_manager/.git'
