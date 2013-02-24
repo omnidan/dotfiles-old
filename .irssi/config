@@ -261,7 +261,7 @@ settings = {
     real_name = "Dan";
     user_name = "dan";
     nick = "dan";
-    timestamp_format = "%H:%M:%S";
+    timestamp_format = "[%H:%M:%S]";
   };
   "fe-text" = { actlist_sort = "refnum"; };
   "fe-common/core" = { timestamps = "yes"; };
