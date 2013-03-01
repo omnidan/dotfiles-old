@@ -102,6 +102,13 @@ zstyle ':completion:*' verbose true
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
+# From holman's dotfiles, thank you!
+# matches case insensitive for lowercase
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+
+# pasting with tabs doesn't perform completion
+zstyle ':completion:*' insert-tab pending
+
 #####   Environment                 7RS56S  #####
 # Environment should be placed to .environment or .zsh_environment (or .zshenv).
 
@@ -136,11 +143,11 @@ fi
 # Sets the default editor. I am vim user, so I want it to be vim. If you don't like terminal based text editors, change "vim" to gedit (Gnome) or Kate (KDE).
 export EDITOR=vim
 
-# Sets user specifig PYTHONPATH. Replace 2.X with your Python version. For example with Python 2.7 you replace X with 7.
+# Sets user specific PYTHONPATH. Replace 2.X with your Python version. For example with Python 2.7 you replace X with 7.
 #export PYTHONPATH=$HOME/.packages/lib/python2.X/site-packages
 
-# Sets locale. You can get list of locales with "locale -a" command. This should be something which ends to .utf8
-# export LC_ALL=en_UK.utf8
+# Sets locale. You can get a list of locales with "locale -a" command.
+#export LC_ALL=en_UK.utf8
 
 # Sets your timezone. Set in format <Region/City>, or just timezone like UTC.
 export TZ="/usr/share/zoneinfo/Europe/Vienna"
@@ -150,21 +157,21 @@ export TZ="/usr/share/zoneinfo/Europe/Vienna"
 PATH=$PATH:/home/dan/apps/bin
 
 # Sets web-browser.
-#export BROWSER=lynx
+export BROWSER=firefox
 
 # "Changes" home directory without root. Uncomment both lines below this.
 #export HOME=<path to new home>
 #cd
 
 # Uses most as the default pager if you uncomment line below. (You will also get colourful manpages :D).
-#export PAGER=most
+export PAGER=most
 
 #####   Aliases                     RJ706I  #####
 
 # todo alias
 alias todo="grep -r 'TODO\|FIXME' ."
 
-# To get sudo work with aliases.
+# To get sudo to work with aliases.
 alias sudo="sudo "
 
 # Moving between directories:
@@ -172,11 +179,11 @@ alias ..="cd .."
 alias .="cd ."
 
 # Automaticly adds title to Youtube-dl when downloading videos with it. Requires youtube-dl.
-alias youtube-dl="youtube-dl -t"
+#alias youtube-dl="youtube-dl -t"
 
 # git specific. This is the command which I use when git asks me to commit something and says that I have modified files, even when I haven't.
 alias gdrop="git stash && git stash drop"
-alias gitk="gitg" # Requires gitg . I just think that it looks nicer than gitk.
+#alias gitk="gitg" # Requires gitg . I just think that it looks nicer than gitk.
 
 # Usually when I run "time", I want to know the current time.
 #alias time="date"
@@ -204,8 +211,8 @@ alias nmap-comprehensive="sudo nmap -sS -sU -T4 -A -v -PE -PP -PS21,22,23,25,80,
 # Little "safer" scan as connecting to only HTTP and HTTPS ports doesn't look so attacking. Copy-paste to .zsh_custom and remove  " -p 80,443" if you want to scan all ports which nmap scans by default.
 alias nmap-osscan="sudo nmap -p 80,443 -O -v --osscan-guess --fuzzy "
 #alias ping="nping "
-alias ping6="nping -6"
-alias netcat="ncat "
+#alias ping6="nping -6"
+#alias netcat="ncat "
 
 # TOR (The Onion Router) specific.
 alias usewithtor="proxychains "
@@ -229,7 +236,7 @@ alias lsd="echo 'What? I have no drugs for you. Oh, you meant ls, here you go.';
 alias aptitute="aptitude "
 
 # This is the checkinstall rule which I like to use.
-alias checkinstall="make install "
+#alias checkinstall="make install "
 
 # The Battle for Wesnoth specific, http://wesnoth.org/
 # It seems to be an good idea to have debug logs on terminal with svn version.
@@ -241,16 +248,16 @@ alias -s org=$BROWSER
 alias -s php=$BROWSER
 alias -s com=$BROWSER
 alias -s net=$BROWSER
-alias -s png="eog"
-alias -s jpg="eog"
-alias -s gif="eog"
+alias -s png="feh"
+alias -s jpg="feh"
+alias -s gif="feh"
 alias -s sxw="libreoffice --writer"
 alias -s doc="libreoffice --writer"
 alias -s gz='tar -xzvf'
 alias -s bz2='tar -xjvf'
-#alias -s java=$EDITOR
-#alias -s txt=$EDITOR
-#alias -s PKGBUILD=$EDITOR
+alias -s java=$EDITOR
+alias -s txt=$EDITOR
+alias -s PKGBUILD=$EDITOR
 
 # For copy-pasting directly from somewhere
 alias %=" "
@@ -280,7 +287,7 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 # Add an "alert" alias for long running commands.  Use like so:
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+#alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
                         
 ## -- End of aliases which are saved from Ubuntu default bashrc. --
 
